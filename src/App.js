@@ -1,28 +1,35 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import CreateNote from './containers/CreateNote'
+import NoteList from './containers/NoteList'
+
+import './App.css'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+
+const stylesApp = {
+  marginTop: 10
+}
 
 class App extends Component {
-  render() {
+  render () {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className='App'>
+        <header className='App-header'>header</header>
+        <main className='App-main'>
+          <div className='container'>
+            <div className='row' style={stylesApp}>
+              <div className='col-md-6'>
+                <CreateNote />
+              </div>
+              <div className='col-md-6'>
+                <NoteList />
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer className='App-footer'>footer</footer>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

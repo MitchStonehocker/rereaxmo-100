@@ -1,0 +1,8 @@
+// src/reducers/index.js
+
+import { combineReducers } from 'redux'
+import notes from './noteReducer'
+
+export default combineReducers({
+  notes: notes
+})
