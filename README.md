@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## What is this?
 
-This is a solid starting point (...-100 in my world) of a notes app using ReactJS, Redux, Axios, Bootstrap, Node, Express, and Mongoose. With a little setup one can setup and run with little effort.
+This is a solid starting point (...-100 in my world) of a notes app using ReactJS, Redux, Axios, Bootstrap, Node, Express, and Mongoose. With a little effort one can setup and run as a stand-alone app.
 
 From here Christy Health styling, AWS Auth, is added in and setup for GraphQL for migrating to AWS DynamoDB.
 
