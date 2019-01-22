@@ -2,7 +2,7 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { createStore, applyMiddleware } from 'redux'
+import { applyMiddleware, compose, createStore } from 'redux'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 
@@ -13,7 +13,12 @@ import { fetchAllNotes } from './actions/index'
 
 import * as serviceWorker from './serviceWorker'
 
-const store = createStore(rootReducer, applyMiddleware(thunk))
+const allStoreEnhancers = compose(
+  applyMiddleware(thunk),
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
+
+const store = createStore(rootReducer, allStoreEnhancers)
 
 store.dispatch(fetchAllNotes())
 

@@ -24,7 +24,7 @@ class NewNote extends React.Component {
       this.state.title.length > 0
     ) {
       this.props.onAddNote(this.state)
-      this.handleReset()
+      // this.handleReset()
     } else {
       alert('add title and body...')
     }

@@ -27,10 +27,10 @@ const noteroutes = require('./routes/NoteRoute')
 
 app.use(bodyParser.json())
 app.use(cors())
-const port = process.env.PORT || 4000
 
 app.use('/notes', noteroutes)
 
+const PORT = process.env.PORT || 4000
 const server = app.listen(port, function () {
-  console.log('Listening on port ' + port)
+  console.log(`Listening on port ${PORT}`)
 })
